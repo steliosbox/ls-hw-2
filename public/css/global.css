@@ -1,0 +1,379 @@
+@font-face {
+  font-family: 'open_sansbold';
+  src: url("/fonts/opensans-bold-webfont.eot");
+  src: url("/fonts/opensans-bold-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/opensans-bold-webfont.woff2") format("woff2"), url("/fonts/opensans-bold-webfont.woff") format("woff"), url("/fonts/opensans-bold-webfont.ttf") format("truetype"), url("/fonts/opensans-bold-webfont.svg#open_sansbold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'open_sansbold_italic';
+  src: url("/fonts/opensans-bolditalic-webfont.eot");
+  src: url("/fonts/opensans-bolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/opensans-bolditalic-webfont.woff2") format("woff2"), url("/fonts/opensans-bolditalic-webfont.woff") format("woff"), url("/fonts/opensans-bolditalic-webfont.ttf") format("truetype"), url("/fonts/opensans-bolditalic-webfont.svg#open_sansbold_italic") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'open_sansextrabold';
+  src: url("/fonts/opensans-extrabold-webfont.eot");
+  src: url("/fonts/opensans-extrabold-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/opensans-extrabold-webfont.woff2") format("woff2"), url("/fonts/opensans-extrabold-webfont.woff") format("woff"), url("/fonts/opensans-extrabold-webfont.ttf") format("truetype"), url("/fonts/opensans-extrabold-webfont.svg#open_sansextrabold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'open_sansextrabold_italic';
+  src: url("/fonts/opensans-extrabolditalic-webfont.eot");
+  src: url("/fonts/opensans-extrabolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/opensans-extrabolditalic-webfont.woff2") format("woff2"), url("/fonts/opensans-extrabolditalic-webfont.woff") format("woff"), url("/fonts/opensans-extrabolditalic-webfont.ttf") format("truetype"), url("/fonts/opensans-extrabolditalic-webfont.svg#open_sansextrabold_italic") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'open_sansitalic';
+  src: url("/fonts/opensans-italic-webfont.eot");
+  src: url("/fonts/opensans-italic-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/opensans-italic-webfont.woff2") format("woff2"), url("/fonts/opensans-italic-webfont.woff") format("woff"), url("/fonts/opensans-italic-webfont.ttf") format("truetype"), url("/fonts/opensans-italic-webfont.svg#open_sansitalic") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'open_sanslight';
+  src: url("/fonts/opensans-light-webfont.eot");
+  src: url("/fonts/opensans-light-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/opensans-light-webfont.woff2") format("woff2"), url("/fonts/opensans-light-webfont.woff") format("woff"), url("/fonts/opensans-light-webfont.ttf") format("truetype"), url("/fonts/opensans-light-webfont.svg#open_sanslight") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'open_sanslight_italic';
+  src: url("/fonts/opensans-lightitalic-webfont.eot");
+  src: url("/fonts/opensans-lightitalic-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/opensans-lightitalic-webfont.woff2") format("woff2"), url("/fonts/opensans-lightitalic-webfont.woff") format("woff"), url("/fonts/opensans-lightitalic-webfont.ttf") format("truetype"), url("/fonts/opensans-lightitalic-webfont.svg#open_sanslight_italic") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'open_sansregular';
+  src: url("/fonts/opensans-regular-webfont.eot");
+  src: url("/fonts/opensans-regular-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/opensans-regular-webfont.woff2") format("woff2"), url("/fonts/opensans-regular-webfont.woff") format("woff"), url("/fonts/opensans-regular-webfont.ttf") format("truetype"), url("/fonts/opensans-regular-webfont.svg#open_sansregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'open_sanssemibold';
+  src: url("/fonts/opensans-semibold-webfont.eot");
+  src: url("/fonts/opensans-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/opensans-semibold-webfont.woff2") format("woff2"), url("/fonts/opensans-semibold-webfont.woff") format("woff"), url("/fonts/opensans-semibold-webfont.ttf") format("truetype"), url("/fonts/opensans-semibold-webfont.svg#open_sanssemibold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'open_sanssemibold_italic';
+  src: url("/fonts/opensans-semibolditalic-webfont.eot");
+  src: url("/fonts/opensans-semibolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/opensans-semibolditalic-webfont.woff2") format("woff2"), url("/fonts/opensans-semibolditalic-webfont.woff") format("woff"), url("/fonts/opensans-semibolditalic-webfont.ttf") format("truetype"), url("/fonts/opensans-semibolditalic-webfont.svg#open_sanssemibold_italic") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+.clearfix:before,
+.clearfix:after {
+  content: '';
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
+
+.text-hide {
+  font: 0/0 serif;
+  text-shadow: none;
+  color: transparent; }
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Here are example usages in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+`display: inline-block` sprite:
+<img class="icon-home" />
+*/
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+html, body {
+  width: 100%;
+  height: 100%;
+  background: #f4f4f4;
+  color: #333;
+  font: 14px/16px "open_sansregular", Arial, "sans-serif"; }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+* {
+  box-sizing: border-box; }
+
+/********** GRID **********/
+div.wrapper {
+  height: auto;
+  min-height: 100%;
+  min-width: 100%;
+  position: relative; }
+
+.wrapper:after {
+  content: '';
+  display: block;
+  height: 370px; }
+
+.inner {
+  width: 1100px;
+  margin: 0 auto; }
+
+.header__top {
+  background: #fff;
+  border-bottom: 2px solid #ebedef; }
+
+.social__small {
+  float: left;
+  padding: 24px 0;
+  font: 0/0 serif;
+  text-shadow: none;
+  color: transparent; }
+  .social__small_item {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 15px; }
+  .social__small_item:first-child {
+    margin-left: 0; }
+  .social__small_link {
+    display: block;
+    width: 26px;
+    height: 26px;
+    background: #333;
+    position: relative;
+    border-radius: 50%; }
+  .social__small_link:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(/img/spritesheet.png); }
+
+.sprite__small_fb:before {
+  width: 6px;
+  height: 12px;
+  background-position: -76px -73px; }
+
+.social__small_fb:hover .sprite__small_fb:before {
+  background-position: -97px 0px; }
+
+.sprite__small_vk:before {
+  width: 10px;
+  height: 12px;
+  background-position: -81px -43px; }
+
+.social__small_vk:hover .sprite__small_vk:before {
+  background-position: -81px -26px; }
+
+.sprite__small_tw:before {
+  width: 16px;
+  height: 12px;
+  background-position: -34px -73px; }
+
+.social__small_tw:hover .sprite__small_tw:before {
+  background-position: -55px -73px; }
+
+.contacts {
+  float: right;
+  padding: 25px 0; }
+
+.address {
+  font-style: normal;
+  position: relative;
+  display: inline-block;
+  font: 14px/24px "open_sansregular", Arial, "sans-serif"; }
+  .address:before {
+    content: '';
+    left: -20px;
+    top: 4px;
+    position: absolute;
+    width: 12px;
+    height: 16px;
+    background-image: url(/img/spritesheet.png);
+    background-position: 0px -73px; }
+
+.phone {
+  margin-left: 76px;
+  position: relative;
+  display: inline-block; }
+  .phone:before {
+    content: '';
+    left: -20px;
+    top: 4px;
+    position: absolute;
+    width: 12px;
+    height: 16px;
+    background-image: url(/img/spritesheet.png);
+    background-position: -17px -73px; }
+  .phone__link {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    font: 18px/24px "open_sanssemibold", Arial, "sans-serif"; }
+
+.logo_orange {
+  display: inline-block;
+  padding: 28px 0 27px; }
+
+.mini_menu {
+  float: right;
+  margin: 35px 0; }
+  .mini_menu__list {
+    padding: 0; }
+  .mini_menu__item {
+    display: inline-block;
+    margin-left: 29px; }
+  .mini_menu__item:first-child {
+    margin-left: 0; }
+  .mini_menu__link {
+    color: #333;
+    font: 16px/25px "open_sanssemibold", Arial, "sans-serif"; }
+  .mini_menu__link:hover {
+    color: #ff6e35;
+    font: 16px/24px "open_sanssemibold", Arial, "sans-serif"; }
+
+.nav {
+  background: #fff; }
+  .nav__list {
+    font: 0/0 serif;
+    text-shadow: none;
+    color: transparent; }
+  .nav__item {
+    display: inline-block; }
+  .nav__link {
+    display: block;
+    padding: 14px 14px;
+    font: 16px/25px "open_sansregular", Arial, "sans-serif";
+    color: #333;
+    text-decoration: none; }
+  .nav__link:hover {
+    background: #e4e2e2; }
+  .nav___link:hover {
+    background: #ff6e35;
+    color: #fff;
+    font-family: "open_sanssemibold", Arial, "sans-serif"; }
+
+#hover {
+  background: #e4e2e2; }
+
+#active {
+  background: #ff6e35;
+  color: #fff; }
+
+.main .side-bar {
+  float: left;
+  width: 331px; }
+
+.main .main-bar {
+  float: left;
+  width: 744px;
+  margin-left: 25px;
+  background: #ccc; }
+
+.footer {
+  position: absolute;
+  min-width: 1100px;
+  width: 100%;
+  height: 370px;
+  margin-top: -370px;
+  background: url(/img/footer_bg.png) top left; }
+  .footer__aside {
+    display: inline-block;
+    float: left; }
+  .footer__bside {
+    display: inline-block;
+    float: right; }
+
+.logo_white {
+  display: inline-block;
+  padding: 70px 0 0 7px; }
+
+.social__big {
+  padding: 34px 0 23px;
+  font: 0/0 serif;
+  text-shadow: none;
+  color: transparent;
+  width: 100%; }
+  .social__big_list {
+    float: right; }
+  .social__big_item {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 26px; }
+  .social__big_item:first-child {
+    margin-left: 0; }
+  .social__big_link {
+    display: block;
+    width: 43px;
+    height: 43px;
+    background: #fff;
+    position: relative;
+    border-radius: 50%; }
+  .social__big_link:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(/img/spritesheet.png); }
+
+.sprite__big_fb:before {
+  width: 11px;
+  height: 21px;
+  background-position: -81px 0px; }
+
+.social__big_fb:hover .sprite__big_fb:before {
+  background-position: -42px -26px; }
+
+.sprite__big_vk:before {
+  width: 16px;
+  height: 21px;
+  background-position: -21px -26px; }
+
+.social__big_vk:hover .sprite__big_vk:before {
+  background-position: 0px -26px; }
+
+.sprite__big_tw:before {
+  width: 25px;
+  height: 21px;
+  background-position: -30px 0px; }
+
+.social__big_tw:hover .sprite__big_tw:before {
+  background-position: 0px 0px; }
+
+.footer__menu {
+  width: 560px;
+  text-align: right;
+  float: left; }
+  .footer__menu_item {
+    display: inline-block;
+    padding-left: 22px; }
+  .footer__menu_link {
+    color: #fff;
+    font: 14px/36px "open_sansregular", Arial, "sans-serif"; }
+
+.copyright {
+  text-align: center;
+  padding: 16px 0;
+  font: 12px/36px "open_sansregular", Arial, "sans-serif"; }
+
+/*# sourceMappingURL=maps/global.css.map */

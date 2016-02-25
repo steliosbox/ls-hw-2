@@ -1,0 +1,35 @@
+.nav {
+    background: $colorLight;
+
+    &__list {
+	    font: 0/0 serif;
+	    text-shadow: none;
+	    color: transparent;
+    }
+    &__item {
+        display: inline-block;
+    }
+    &__link {
+        display: block;
+        padding: 14px 14px;
+        font: 16px/25px $regular;
+        color: $colorDark;
+        text-decoration: none;
+    }
+    &__link:hover {
+        background: $navHover;
+    }
+    &___link:hover {
+        background: $colorOrange;
+        color: $colorLight;
+        font-family: $semibold;
+    }
+}
+
+#hover {
+	background: $navHover;
+}
+#active {
+	background: $colorOrange;
+	color: $colorLight;
+}

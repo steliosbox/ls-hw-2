@@ -1,0 +1,81 @@
+// === Social menu
+.social__small {
+    float: left;
+    padding: 24px 0;
+    font: 0/0 serif;
+    text-shadow: none;
+    color: transparent;
+    
+    &_list {
+       
+    }
+    &_item {
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 15px;
+    }
+    &_item:first-child {
+        margin-left: 0;
+    }
+    &_link {
+        display: block;    
+        width: $socialWidthSmall;
+        height: $socialWidthSmall;
+        background: $colorDark;
+        position: relative;
+        @include border-radius(50%);
+    }
+    &_link:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background-image: url(/img/spritesheet.png);
+    }
+}
+
+$fb: nth($small_fb, 10);
+
+.sprite__#{$fb}:before {
+    width: nth($small_fb, 5);
+    height: nth($small_fb, 6);
+    $sprite-offset-x: nth($small_fb, 3);
+    $sprite-offset-y: nth($small_fb, 4);
+    background-position: $sprite-offset-x  $sprite-offset-y;
+}
+.social__#{$fb}:hover .sprite__#{$fb}:before {
+    $sprite-offset-x: nth($small_fb-hover, 3);
+    $sprite-offset-y: nth($small_fb-hover, 4);
+    background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+$vk: nth($small_vk, 10);
+
+.sprite__#{$vk}:before {
+    width: nth($small_vk, 5);
+    height: nth($small_vk, 6);
+    $sprite-offset-x: nth($small_vk, 3);
+    $sprite-offset-y: nth($small_vk, 4);
+    background-position: $sprite-offset-x  $sprite-offset-y;
+}
+.social__#{$vk}:hover .sprite__#{$vk}:before {
+    $sprite-offset-x: nth($small_vk-hover, 3);
+    $sprite-offset-y: nth($small_vk-hover, 4);
+    background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+$tw: nth($small_tw, 10);
+
+.sprite__#{$tw}:before {
+    width: nth($small_tw, 5);
+    height: nth($small_tw, 6);
+    $sprite-offset-x: nth($small_tw, 3);
+    $sprite-offset-y: nth($small_tw, 4);
+    background-position: $sprite-offset-x  $sprite-offset-y;
+}
+.social__#{$tw}:hover .sprite__#{$tw}:before {
+    $sprite-offset-x: nth($small_tw-hover, 3);
+    $sprite-offset-y: nth($small_tw-hover, 4);
+    background-position: $sprite-offset-x  $sprite-offset-y;
+}

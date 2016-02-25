@@ -1,0 +1,48 @@
+- var footer_menu = ['Планшеты','Мобильные телефоны','Mp3 плееры','Персональные компьютеры','Ноутбуки','Аксессуары','Бытовая техника'];
+- var m__social_big = ['facebook', 'vkontakte', 'twitter'];
+- var m__social = ['facebook', 'vkontakte', 'twitter'];
+<!DOCTYPE html>
+html
+    head(lang="ru-RU")
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        //- SEO
+        meta(name="discription" content="")
+        meta(name="keywords" content="")
+        meta(name="auther" content="Baglaridis Stelios")
+        //- CSS
+        link(rel="stylesheet", href="/bower/normalize-css/normalize.css")
+        link(rel="stylesheet", href="/css/global.css")
+        //- Заголовок сайта
+        block title
+    body
+        div.wrapper
+            header.header
+                include __header/_header
+            nav.nav
+                include __nav/_nav
+            div.main
+                div.inner.clearfix
+                    aside.side-bar side-bar
+                        //- include accordion
+                    section.main-bar main-bar
+                        //- block main-bar
+        footer.footer
+            div.inner
+
+                .div.clearfix
+                    .footer__aside
+                        include __logo_white/_logo_white
+                    .footer__bside 
+                        include __social_big/_social_big
+                        nav.footer__menu
+                            ul.footer__menu-list
+                                each item in footer_menu
+                                    li.footer__menu_item
+                                        a(href="#").footer__menu_link= item
+                
+                .copyright All rights reserved. 2015. no copy alowed
+
+        //- JS
+        script(src="/bower/jquery/dist/jquery.js")

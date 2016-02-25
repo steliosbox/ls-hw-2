@@ -1,0 +1,20 @@
+{
+  "name": "ls-hw-2",
+  "devDependencies": {
+    "normalize-css": "normalize.css#^3.0.3",
+    "jquery": "1.8"
+  },
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/bower",
+    "test",
+    "tests"
+  ]
+}

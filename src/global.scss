@@ -1,0 +1,99 @@
+@import 'scss/_fonts';
+@import 'scss/_varibals';
+@import 'scss/_css_tricks';
+@import 'scss/_mixin';
+@import 'scss/_spritesheet';
+html, body {
+    width: 100%;
+    height: 100%;
+    background: $siteBg;
+    color: $siteColor;
+    font: $siteFont;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+* {
+    box-sizing: border-box;
+}
+/********** GRID **********/
+div.wrapper {
+    height: auto;
+    min-height: 100%;
+    min-width: $containerWidth;;
+    position: relative;
+}
+.wrapper:after{
+    content: '';
+    display: block;
+    height: $footerHeight;
+}
+.inner {
+    width: $innerWidth;
+    margin: 0 auto;
+}
+
+@import 'template/__header/_header';
+
+@import 'template/__nav/_nav';
+
+    .main {
+        .side-bar {
+            //- боковая часть сайта
+            float: left;
+            width: $sideBarWidth;
+        }
+        .main-bar {
+            //- основная част сайта
+            float: left;
+            width: ($innerWidth - $sideBarWidth - $paddingBetweenBlogs);
+            margin-left: $paddingBetweenBlogs;
+            background: #ccc;
+        }
+    }
+.footer { 
+    //- футер сайта
+    position: absolute;
+    min-width: $innerWidth;
+    width: 100%;
+    height: $footerHeight;
+    margin-top: -$footerHeight;
+    background: url(/img/footer_bg.png) top left;
+    
+    &__aside {
+        display: inline-block;
+        float: left;
+        // background: #cdd;   
+    }
+    &__bside {
+        display: inline-block;
+        // background: #fdf;
+        float: right;
+    }
+}
+
+@import 'template/__logo_white/_logo_white';
+@import 'template/__social_big/_social_big';
+
+.footer__menu {
+    width: 560px;
+    text-align: right;
+    float: left;
+    &_item {
+        display: inline-block;
+        padding-left: 22px;
+//        padding-bottom: 16px; 
+    }
+    &_link {
+        color: $colorLight;
+        font: 14px/36px $regular;
+    }
+}
+
+.copyright {
+    text-align: center;
+    padding: 16px 0;
+    font: 12px/36px $regular;
+}

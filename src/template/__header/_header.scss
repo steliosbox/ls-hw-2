@@ -1,0 +1,13 @@
+.header {
+    &__top {
+        background: $colorLight;
+        border-bottom: 2px solid $borderColor;
+    }
+    &__bottom {
+
+    }
+}
+@import '__social_small/_social_small';
+@import '__contacts/_contacts';
+@import '__logo_orange/_logo_orange';
+@import '__mini_menu/_mini_menu';

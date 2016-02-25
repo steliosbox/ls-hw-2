@@ -1,0 +1,7 @@
+- var m__mini_menu = ['map', 'history', 'basket']
+- var m__mini_menu_text = ['Карта проезда', 'История заказов', 'Корзина']
+.mini_menu
+    ul.mini_menu__list
+        each item, val in m__mini_menu
+            li(class="mini_menu__item")
+                a(href="#" class="mini_menu__link mini_menu__#{item}")= m__mini_menu_text[val]

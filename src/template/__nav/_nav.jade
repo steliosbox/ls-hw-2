@@ -1,0 +1,6 @@
+- var nav = ['Планшеты','Мобильные телефоны','Мр3 плееры','Персональные компьютеры','Ноутбуки','Аксессуары','Бытовая техника'];
+- var link = ['link','active','link','link','hover','link','link'];
+.inner
+	ul.nav__list
+		each item, val in nav
+			li.nav__item: a(href="#" class="nav__link" id="#{link[val]}")= item

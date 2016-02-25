@@ -1,0 +1,47 @@
+//=== Address
+.contacts {
+    float: right;
+    padding: 25px 0;   
+}
+.address {
+    font-style: normal;
+    position: relative;
+    display: inline-block;
+    font: 14px/24px $regular;
+    
+    &:before {
+        content: '';
+        left:-20px;
+        top: (24px / 2) - (16px / 2);
+        position: absolute;
+        width: nth($map-pin, 5);
+        height: nth($map-pin, 6);
+        background-image: url(/img/spritesheet.png);
+        background-position: nth($map-pin, 3)  nth($map-pin, 4);
+    }
+} 
+.phone {
+    margin-left: 76px;
+    position: relative;  
+    display: inline-block;
+    
+    &:before {
+        content: '';
+        left:-20px;
+        top: (24px / 2) - (16px / 2);
+        position: absolute;
+        width: nth($telephone, 5);
+        height: nth($telephone, 6);
+        background-image: url(/img/spritesheet.png);
+        background-position: nth($telephone, 3) nth($telephone, 4);      
+    }
+    
+    &__link {
+        display: block;
+        color: $colorDark;
+        text-decoration: none;
+        font: 18px/24px $semibold;
+    }
+}
+
+

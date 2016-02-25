@@ -1,0 +1,27 @@
+.mini_menu {
+    
+    float: right;
+    margin: 35px 0;
+
+    &__list {
+        padding: 0;
+    }
+    &__item {
+        display: inline-block;
+        margin-left: 29px;
+    }
+    &__item:first-child {
+        margin-left: 0;
+    }
+    &__link {
+        color: $colorDark;
+        font: 16px/25px $semibold;
+        // text-decoration: none;
+        // border-bottom: 1px solid $colorDark;
+    }
+    &__link:hover {
+        color: $colorOrange;
+        font: 16px/24px $semibold;
+        // border-bottom-color: $colorOrange;
+    }
+}

@@ -1,0 +1,3 @@
+[Sun Feb 14 2016 21:02:34 GMT+0200 (GTB Standard Time)] layer "+7 (921) 123-12-13": Expected Either a default asset specification or a layer asset specification but "+" found.
+[Sun Feb 14 2016 21:02:34 GMT+0200 (GTB Standard Time)] layer "+7 (921) 123-12-13": Expected Either a default asset specification or a layer asset specification but "+" found.
+[Sun Feb 14 2016 21:02:34 GMT+0200 (GTB Standard Time)] layer "+7 (921) 123-12-13": Expected Either a default asset specification or a layer asset specification but "+" found.

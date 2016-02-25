@@ -1,0 +1,8 @@
+- var m__social_small = ['facebook', 'vkontakte', 'twitter']
+- var m__social_small_short = ['fb', 'vk', 'tw']
+
+.social__small
+    ul.social__small_list
+        each item, val in m__social_small
+            li(class="social__small_item social__small_#{m__social_small_short[val]}")
+                a(href="#" class="social__small_link sprite__small_#{m__social_small_short[val]}")= item
