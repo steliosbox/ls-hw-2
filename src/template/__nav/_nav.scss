@@ -2,34 +2,34 @@
     background: $colorLight;
 
     &__list {
-	    font: 0/0 serif;
-	    text-shadow: none;
-	    color: transparent;
+        font: 0/0 serif;
+        text-shadow: none;
+        color: transparent;
     }
     &__item {
         display: inline-block;
+        font: 16px/25px $regular;
     }
     &__link {
         display: block;
         padding: 14px 14px;
-        font: 16px/25px $regular;
         color: $colorDark;
         text-decoration: none;
     }
     &__link:hover {
         background: $navHover;
     }
-    &___link:hover {
-        background: $colorOrange;
+    &__active {
+        display: block;
+        padding: 14px 14px;
         color: $colorLight;
-        font-family: $semibold;
+        background: $colorOrange;
+        text-decoration: none;
     }
-}
-
-#hover {
-	background: $navHover;
-}
-#active {
-	background: $colorOrange;
-	color: $colorLight;
+    &__hover {
+        display: block;
+        padding: 14px 14px;
+        background: $navHover;
+        text-decoration: none;
+    }
 }

@@ -258,26 +258,53 @@ div.wrapper {
     text-shadow: none;
     color: transparent; }
   .nav__item {
-    display: inline-block; }
+    display: inline-block;
+    font: 16px/25px "open_sansregular", Arial, "sans-serif"; }
   .nav__link {
     display: block;
     padding: 14px 14px;
-    font: 16px/25px "open_sansregular", Arial, "sans-serif";
     color: #333;
     text-decoration: none; }
   .nav__link:hover {
     background: #e4e2e2; }
-  .nav___link:hover {
-    background: #ff6e35;
+  .nav__active {
+    display: block;
+    padding: 14px 14px;
     color: #fff;
-    font-family: "open_sanssemibold", Arial, "sans-serif"; }
+    background: #ff6e35;
+    text-decoration: none; }
+  .nav__hover {
+    display: block;
+    padding: 14px 14px;
+    background: #e4e2e2;
+    text-decoration: none; }
 
-#hover {
-  background: #e4e2e2; }
-
-#active {
-  background: #ff6e35;
-  color: #fff; }
+.breadcrumbs {
+  padding: 20px 0; }
+  .breadcrumbs__list {
+    font: 0/0 serif;
+    text-shadow: none;
+    color: transparent; }
+  .breadcrumbs__item {
+    display: inline-block;
+    font: 14px/20px "open_sansregular", Arial, "sans-serif"; }
+  .breadcrumbs__link {
+    color: #333;
+    text-decoration: none;
+    position: relative;
+    padding-right: 15px;
+    margin-right: 5px; }
+    .breadcrumbs__link:after {
+      content: '>';
+      right: 0;
+      position: absolute; }
+    .breadcrumbs__link:hover {
+      text-decoration: underline; }
+  .breadcrumbs__link_active {
+    color: #ff6e35;
+    text-decoration: none; }
+    .breadcrumbs__link_active:hover {
+      text-decoration: underline; }
 
 .main .side-bar {
   float: left;
