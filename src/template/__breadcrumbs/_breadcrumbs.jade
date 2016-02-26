@@ -1,6 +1,7 @@
-- var breadcrumbs = ['Главная', 'Каталог'];
-
-ul.breadcrumbs__list
-	each item in breadcrumbs
-		li.breadcrumbs__item
-			a(href="#" class="breadcrumbs__" + ( (item == 'Каталог') ? 'link_active' : 'link' ) )= item
+div.breadcrumbs
+	div.inner
+		ul.breadcrumbs__list
+			- var breadcrumbs = ['Главная', 'Каталог'];
+			each item in breadcrumbs
+				li.breadcrumbs__item
+					a(href="#" class="breadcrumbs__" + ( ( item == 'Каталог' ) ? 'link_active' : 'link' ) )= item

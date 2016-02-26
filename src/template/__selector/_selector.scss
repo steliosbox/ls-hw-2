@@ -1,0 +1,46 @@
+.select {
+	margin: 0 0 20px;
+	
+	&__sort {
+		display: inline-block;
+	}
+	&__view {
+		float: right;
+	}
+}
+.view {
+	&__label {
+		// display: inline-block;
+		float: left;
+	}
+	&__list {
+		display: inline-block;
+	    font: 0/0 serif;
+	    text-shadow: none;
+	    color: transparent;
+	}
+	&__item {
+      display: inline-block;
+      position: relative;
+      width: 26px;
+      height: 16px;
+      // padding-left: 20px;
+	}
+	&__item:before {
+      content: '';
+      display: block;
+      margin: 5px;
+      width: 16px;
+      height: 16px;
+      background-image: url('/img/spritesheet.png');
+	}
+	&__1:before {
+      background-position: 0 -52px;
+	}
+	&__2:before {
+      background-position: -60px -21px;
+	}	
+	&__3:before {
+      background-position: -60px 0;
+	}		
+}

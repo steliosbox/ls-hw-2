@@ -18,22 +18,20 @@ html
         block title
     body
         div.wrapper
-            header.header
-                include __header/_header
-            nav.nav
-                include __nav/_nav
-            div.breadcrumbs
-                div.inner
-                    include __breadcrumbs/_breadcrumbs
+            include __header/_header
+            include __nav/_nav
+            include __breadcrumbs/_breadcrumbs
             div.main
                 div.inner.clearfix
-                    aside.side-bar side-bar
-                        //- include accordion
-                    section.main-bar main-bar
+                    div.page__title Мобильные телефоны
+                    aside.side-bar
+                        include __sidebar/_sidebar
+                    section.main-bar
                         //- block main-bar
+                        include __selector/_selector
+                        include __content/_content
         footer.footer
             div.inner
-
                 .div.clearfix
                     .footer__aside
                         include __logo_white/_logo_white
@@ -48,4 +46,6 @@ html
                 .copyright All rights reserved. 2015. no copy alowed
 
         //- JS
-        script(src="/bower/jquery/dist/jquery.js")
+        script(src="./bower/jquery/jquery.js")
+        script(src="./js/accordion.js")
+        script(src="./js/rating.js")

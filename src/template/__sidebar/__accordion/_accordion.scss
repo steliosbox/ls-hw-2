@@ -1,0 +1,110 @@
+.picker {
+	&__list {
+		border: 1px solid $borderColor;
+		border-radius: 5px;
+		overflow: hidden;
+	}
+	&__item {
+		background: $colorLight;
+	}
+	&__item-active {
+		background: $colorLightBlue;
+	}
+	&__item:hover {
+		@extend .picker__item-active;
+		cursor: pointer;
+	}
+	&__link {
+		padding: 15px 30px;
+		display: block;
+		font: 14px/14px $regular;
+		color: $colorDark;
+		text-decoration: none;
+	}
+}
+
+
+.accordion {
+	margin-top: 20px; 
+
+	&__list {
+		border: 1px solid $borderColor;
+		border-radius: 5px;
+		overflow: hidden;
+	}
+	&__item {
+		background: $colorLight;
+	}
+	&__trigger {
+		padding: 15px 30px;
+		display: block;
+		color: $colorDark;
+		font: 16px/16px $semibold;
+		text-decoration: none;
+	}
+}
+.accordion__inner {
+	&_list {
+
+	}
+	&_item {
+		padding: 10px 30px;
+	}
+}
+.input {
+	&__radio {
+		// opacity: 0;
+		display: none;
+	}
+	
+	&__radio-label,
+	&__checkbox {
+		
+		&:hover {
+			cursor: pointer;
+		}
+
+		$radioWidth: 19px;
+		$radioBorder: 3px;
+		$radioSpaceBetween: 3px;
+		
+		position: relative;
+		padding-left: 29px;
+		padding-top: 2px;	
+		min-height: $radioWidth;
+		display: block;
+		box-sizing: border-box;
+
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			width: $radioWidth;
+			height: $radioWidth;
+			box-sizing: border-box;		
+			background: $colorLight;
+			border: $radioBorder solid $colorOrange;
+			border-radius: 50%;
+			top: 50%;
+			left: 0;
+			transform: translate(-50%,-50%);	
+		}
+		.input__radio:checked  + &:before {
+			border: $radioBorder solid $colorOrange;
+		}
+		.input__radio:checked  + &:after {
+			content: '';
+			display: block;
+			position: absolute;
+			width: $radioWidth - 10px;
+			height: $radioWidth - 10px;
+			box-sizing: border-box;	
+			border-radius: 50%;
+			border: $radioBorder solid $colorOrange;
+			background: $colorOrange;
+			top: 50%;
+			left: 0;
+			transform: translate(-50%,-50%);
+		}
+	}
+}

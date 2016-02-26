@@ -12,7 +12,7 @@
     }
     &__link {
         display: block;
-        padding: 14px 14px;
+        padding: 14px 16px;
         color: $colorDark;
         text-decoration: none;
     }
@@ -21,14 +21,15 @@
     }
     &__active {
         display: block;
-        padding: 14px 14px;
+        padding: 14px 16px;
         color: $colorLight;
         background: $colorOrange;
         text-decoration: none;
     }
     &__hover {
         display: block;
-        padding: 14px 14px;
+        padding: 14px 16px;
+        color: $colorDark;
         background: $navHover;
         text-decoration: none;
     }

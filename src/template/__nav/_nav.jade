@@ -1,8 +1,10 @@
-- var nav = ['Планшеты','Мобильные телефоны','Мр3 плееры','Персональные компьютеры','Ноутбуки','Аксессуары','Бытовая техника'];
-.inner
-	ul.nav__list
-		each item, val in nav
-			li.nav__item
-				a(href="#" 
-					class="nav__" + ( (item==nav[1] || item==nav[4]) ? ( (item==nav[1]) ? 'active' : 'hover') : 'link' ) 
+nav.nav
+	div.inner
+		ul.nav__list
+			- var nav = ['Планшеты','Мобильные телефоны','Мр3 плееры','Персональные компьютеры','Ноутбуки','Аксессуары','Бытовая техника'];
+			each item, val in nav
+				li.nav__item
+					a(href="#" class="nav__" + ( 
+						( item == nav[1] || item == nav[4] ) ? 
+						( ( item == nav[1] ) ? 'active' : 'hover') : 'link' ) 
 					)= item

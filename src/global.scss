@@ -35,13 +35,16 @@ div.wrapper {
     margin: 0 auto;
 }
 
-@import 'template/__header/_header';
+    @import 'template/__header/_header';
+    @import 'template/__nav/_nav';
+    @import 'template/__breadcrumbs/_breadcrumbs';
 
-@import 'template/__nav/_nav';
-
-@import 'template/__breadcrumbs/_breadcrumbs';
-
+    .page__title {
+        font: 20px/20px $bold;
+        padding: 24px 0;
+    }
     .main {
+        margin-bottom: 20px;
         .side-bar {
             //- боковая часть сайта
             float: left;
@@ -52,9 +55,15 @@ div.wrapper {
             float: left;
             width: ($innerWidth - $sideBarWidth - $paddingBetweenBlogs);
             margin-left: $paddingBetweenBlogs;
-            background: #ccc;
+            // background: #ccc;
         }
     }
+@import 'template/__sidebar/_sidebar';
+@import 'template/__selector/_selector';
+@import 'template/__content/_content1';
+@import 'template/__content/_content2';
+@import 'template/__content/_content3';
+
 .footer { 
     //- футер сайта
     position: absolute;

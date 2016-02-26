@@ -1,0 +1,18 @@
+.picker
+	ul.picker__list
+		- var picker = ['Флагманы', 'Бюджетная линейка']
+		each item in picker
+			li(class="picker__" + ( (item == 'Бюджетная линейка') ? 'item-active' : 'item' ) )
+				a(href="#" class="picker__link")= item
+
+.accordion
+	ul.accordion__list
+		- var accordion = ['Наличие в магазинах','Бренды','Цена','Цвет','Операционные системы']
+		li(class="accordion__item")
+			a(href="#" class="accordion__trigger") Наличие в магазинах
+			ul.accordion__inner_list
+				- var isset = ['Во всех магазинах Во всех магазинах Во всех магазинах Во всех магазинах Во всех магазинах Во всех магазинах Во всех магазинах Во всех магазинах Во всех магазинах Во всех магазинах Во всех магазинах','В ближайшем ко мне магазине']
+				each item, val in isset 
+					li.accordion__inner_item
+						input(type="radio" name="isset" id="isset-#{val}").input__radio
+						label(for="isset-#{val}").input__radio-label=item
