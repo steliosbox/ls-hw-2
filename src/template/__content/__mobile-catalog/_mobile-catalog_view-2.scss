@@ -122,47 +122,27 @@ img {
     .rating {
         
         margin: 10px auto 0;
+        @include clearfix();
+        display: table;
 
         &__list {
-
+            @include hide-text();
+            float: left;
+            margin-top: 1px;
         }
         &__item {
-            // @include inline-block(top);
-            display: block;
-            color: #333;
-            font-size: 14px;
+            @include inline-block(top);
             width: 16px;
             height: 15px;
+        }
+        &__star-red {
+            background: url('/img/stars-s194e70acee.png') no-repeat 0 0;
+        }
+        &__star-grey {
             background: url('/img/stars-s194e70acee.png') no-repeat -2px -16px;
         }
-
-
-        // &__stars {
-        //     @include inline-block(top);
-        //     direction: rtl;
-        //     // position: relative;
-        // }
-        // input {
-        //     position: absolute;
-        //     opacity: 0;
-        // }
-        // &__stars > label {
-            
-        //     @include inline-block(top);
-        //     position: relative;
-        //     width: 1.0em;
-        //     font-size: 18px;
-        //     color: #333;
-        // }
-        // &__stars > label:hover:before,
-        // &__stars > label:hover ~ label:before {
-        //     height: 15px;
-        //     content: "\2605";
-        //     position: absolute;
-        //     color: red;
-        // }
         &__result {
-            @include inline-block(top);
+            float: right;
             width: 32px;
             margin-left: 10px;
             padding: 2px 12px;

@@ -161,7 +161,29 @@
 		}		
 	}
 }
+.price {
+	
+	@include clearfix;
 
+	&__input-from,
+	&__input-to {
+		width:83px; 
+		height:30px;
+		padding-left: 5px;
+		padding-right: 5px;
+		border: 1px solid $borderColor;
+		@include border-radius(5px);
+		outline: none;
+		font: 14px/20px $semibold;
+		color: $colorDark;
+	}
+	&__label-from {
+
+	}
+	&__label-to {
+		float: right;
+	}
+}
 .color {
 
 	&__list {

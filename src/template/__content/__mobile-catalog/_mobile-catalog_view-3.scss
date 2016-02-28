@@ -45,7 +45,7 @@ img {
             vertical-align: middle;
         }
         &_img {
-            width: 130px;
+            width: 135px;
         }
         &_about {
 
@@ -67,14 +67,15 @@ img {
         span {
             font: 14px/20px $semibold;
             color: #333;  
-            margin-left: 10px;
+            margin-left: 5px;
         }
     }
     //========== Описание продукции #1 of 3 ==========
     .about_title {
-           width: 285px;
-            text-align: left;
-        // margin: 10px 0;
+        width: 285px;
+        text-align: left;
+        margin: 10px 0;
+        padding: 0 10px;
         font: 14px/20px $semibold;
         color: #000;
     }
@@ -86,7 +87,8 @@ img {
         .cost {
             display: table-cell;
             vertical-align: middle;
-            font: 18px/20px $regular;
+            font: 20px/20px $bold;
+            color: $colorDark;
             width: 100px;
         }
         button {

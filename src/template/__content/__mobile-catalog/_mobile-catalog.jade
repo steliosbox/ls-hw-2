@@ -45,11 +45,12 @@ div(class="product product__view-#{num}")
               
                   
             //- Райтинг
-            .rating
+            div.rating
+                - var result = 4;
                 ul.rating__list
-                    - for(var i = 1; i <= 5; i++)
-                        li(class="rating_item " + ( (i < 5) ? 'red-star' : 'grey-star' ) )= i
-                .rating__result 0
+                  - for(var i = 1; i <= 5; i++)
+                    li(class="rating__item rating__star-" + ((i<=result) ? 'red' : 'grey'))= i
+                div.rating__result= result
 
           //- цена тавара и кнопка заказа
           li.inner__product_item.inner__product_price

@@ -452,6 +452,27 @@ div.wrapper {
     .clear-inputs .link__brend:hover, .clear-inputs .link__os:hover {
       text-decoration: none; }
 
+.price:before, .price:after {
+  content: '';
+  display: table; }
+
+.price:after {
+  clear: both; }
+
+.price__input-from, .price__input-to {
+  width: 83px;
+  height: 30px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border: 1px solid #ebedef;
+  border-radius: 5px;
+  outline: none;
+  font: 14px/20px "open_sanssemibold", Arial, "sans-serif";
+  color: #333; }
+
+.price__label-to {
+  float: right; }
+
 .color__list {
   margin-top: -22px;
   margin-left: -22px; }
@@ -548,23 +569,22 @@ img {
   max-height: 100%;
   height: auto; }
 
-.product__view-1 .product__list {
+.product__view-1 .product {
   font: 0/0 serif;
   text-shadow: none;
   color: transparent; }
-
-.product__view-1 .product__item {
-  display: table;
-  border: 1px solid #ebedef;
-  border-radius: 5px;
-  overflow: hidden;
-  padding: 15px 20px;
-  box-sizing: border-box;
-  width: 100%;
-  background: white; }
-  .product__view-1 .product__item:hover {
-    box-shadow: 0px 1px 5.7px 0.3px rgba(118, 118, 118, 0.75);
-    position: relative; }
+  .product__view-1 .product__item {
+    display: table;
+    border: 1px solid #ebedef;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 15px 20px;
+    box-sizing: border-box;
+    width: 100%;
+    background: white; }
+    .product__view-1 .product__item:hover {
+      box-shadow: 0px 1px 5.7px 0.3px rgba(118, 118, 118, 0.75);
+      position: relative; }
 
 .product__view-1 .inner__product_list {
   display: table-row; }
@@ -657,17 +677,30 @@ img {
   background: #fff; }
 
 .product__view-1 .rating {
-  margin: 10px auto 0; }
+  margin: 10px 0 0;
+  display: table; }
+  .product__view-1 .rating:before, .product__view-1 .rating:after {
+    content: '';
+    display: table; }
+  .product__view-1 .rating:after {
+    clear: both; }
+  .product__view-1 .rating__list {
+    font: 0/0 serif;
+    text-shadow: none;
+    color: transparent;
+    float: left;
+    margin-top: 1px; }
   .product__view-1 .rating__item {
-    display: block;
-    color: #333;
-    font-size: 14px;
-    width: 16px;
-    height: 15px;
-    background: url("/img/stars-s194e70acee.png") no-repeat -2px -16px; }
-  .product__view-1 .rating__result {
     display: inline-block;
     vertical-align: top;
+    width: 16px;
+    height: 15px; }
+  .product__view-1 .rating__star-red {
+    background: url("/img/stars-s194e70acee.png") no-repeat 0 0; }
+  .product__view-1 .rating__star-grey {
+    background: url("/img/stars-s194e70acee.png") no-repeat -2px -16px; }
+  .product__view-1 .rating__result {
+    float: right;
     width: 32px;
     margin-left: 10px;
     padding: 2px 12px;
@@ -818,17 +851,30 @@ img {
   background: #fff; }
 
 .product__view-2 .rating {
-  margin: 10px auto 0; }
+  margin: 10px auto 0;
+  display: table; }
+  .product__view-2 .rating:before, .product__view-2 .rating:after {
+    content: '';
+    display: table; }
+  .product__view-2 .rating:after {
+    clear: both; }
+  .product__view-2 .rating__list {
+    font: 0/0 serif;
+    text-shadow: none;
+    color: transparent;
+    float: left;
+    margin-top: 1px; }
   .product__view-2 .rating__item {
-    display: block;
-    color: #333;
-    font-size: 14px;
-    width: 16px;
-    height: 15px;
-    background: url("/img/stars-s194e70acee.png") no-repeat -2px -16px; }
-  .product__view-2 .rating__result {
     display: inline-block;
     vertical-align: top;
+    width: 16px;
+    height: 15px; }
+  .product__view-2 .rating__star-red {
+    background: url("/img/stars-s194e70acee.png") no-repeat 0 0; }
+  .product__view-2 .rating__star-grey {
+    background: url("/img/stars-s194e70acee.png") no-repeat -2px -16px; }
+  .product__view-2 .rating__result {
+    float: right;
     width: 32px;
     margin-left: 10px;
     padding: 2px 12px;
@@ -911,7 +957,7 @@ img {
   vertical-align: middle; }
 
 .product__view-3 .inner__product_img {
-  width: 130px; }
+  width: 135px; }
 
 .product__view-3 .inner__product_price {
   width: 420px; }
@@ -924,11 +970,13 @@ img {
   .product__view-3 .artical span {
     font: 14px/20px "open_sanssemibold", Arial, "sans-serif";
     color: #333;
-    margin-left: 10px; }
+    margin-left: 5px; }
 
 .product__view-3 .about_title {
   width: 285px;
   text-align: left;
+  margin: 10px 0;
+  padding: 0 10px;
   font: 14px/20px "open_sanssemibold", Arial, "sans-serif";
   color: #000; }
 
@@ -938,7 +986,8 @@ img {
   .product__view-3 .price .cost {
     display: table-cell;
     vertical-align: middle;
-    font: 18px/20px "open_sansregular", Arial, "sans-serif";
+    font: 20px/20px "open_sansbold", Arial, "sans-serif";
+    color: #333;
     width: 100px; }
   .product__view-3 .price button {
     display: table-cell;
