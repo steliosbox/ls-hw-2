@@ -1,0 +1,14 @@
+.footer {
+    &__aside {
+        display: inline-block;
+        float: left;
+    }
+    &__bside {
+        display: inline-block;
+        float: right;
+    }
+}
+@import '__footer_menu/_footer_menu';
+@import '__logo_white/_logo_white';
+@import '__social_big/_social_big';
+@import '__copyright/_copyright';

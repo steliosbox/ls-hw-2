@@ -1,3 +1,18 @@
 @mixin border-radius($border) {
     border-radius: $border;
 }
+@mixin transform-to-center() {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+}
+@mixin hide-text() {
+	font: 0/0 serif;
+	text-shadow: none;
+	color: transparent;
+}
+@mixin inline-block($align) {
+	display: inline-block;
+    vertical-align: $align;
+}

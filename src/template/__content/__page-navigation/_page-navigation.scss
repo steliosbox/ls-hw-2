@@ -1,0 +1,35 @@
+.pages {
+    margin-top: 65px;
+    font: 0/0 serif;
+    text-shadow: none;
+    color: transparent;
+	float: right;
+
+	&__backward,
+	&__forward,
+	&__loop,
+	&__active {
+		display: inline-block;
+		background: $colorLight;
+		width: 25px;
+		height: 25px;
+		margin-left: 5px;
+		box-sizing: border-box;
+		border: 1px solid #c9c9c9;
+		border-radius: 5px;
+		font: 12px/25px $bold;
+		color: #7f7f7f;
+		cursor: pointer;
+		text-align: center;
+		
+		&:first-child {
+			margin-left: 0;
+		}
+		&:hover {
+			background: #e0e0e0;
+		}
+	}
+	&__active {
+		background: #e0e0e0;
+	}
+}

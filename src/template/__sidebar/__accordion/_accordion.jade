@@ -9,10 +9,53 @@
 	ul.accordion__list
 		- var accordion = ['Наличие в магазинах','Бренды','Цена','Цвет','Операционные системы']
 		li(class="accordion__item")
-			a(href="#" class="accordion__trigger") Наличие в магазинах
+			a(href="#" class="accordion__trigger")= accordion[0]
 			ul.accordion__inner_list
-				- var isset = ['Во всех магазинах Во всех магазинах Во всех магазинах Во всех магазинах Во всех магазинах Во всех магазинах Во всех магазинах Во всех магазинах Во всех магазинах Во всех магазинах Во всех магазинах','В ближайшем ко мне магазине']
-				each item, val in isset 
+				li.accordion__inner_item
+					input(type="radio" name="isset" id="isset-1" checked).input__radio
+					label(for="isset-1").input__radio-label Во всех магазинах
+				li.accordion__inner_item
+					input(type="radio" name="isset" id="isset-2").input__radio
+					label(for="isset-2").input__radio-label В ближайшем ко мне магазине
+
+		li(class="accordion__item")
+			a(href="#" class="accordion__trigger")= accordion[1]
+			ul.accordion__inner_list
+				- var brand = ['Lenovo','Apple','Samsung','Asus','Motorola']
+				each item, val in brand 
 					li.accordion__inner_item
-						input(type="radio" name="isset" id="isset-#{val}").input__radio
-						label(for="isset-#{val}").input__radio-label=item
+						input(type="checkbox" name="brend" id="brend-#{val}").brend.input__checkbox
+						label(for="brend-#{val}").input__checkbox-label=item
+				div.clear-inputs
+					a(href="#").link__brend Сбросить фильтр
+
+		li(class="accordion__item")
+			a(href="#" class="accordion__trigger")= accordion[2]
+			ul.accordion__inner_list
+				li.accordion__inner_item
+					div.price
+						label(for="price1").input__price-label От
+							input(type="text" name="price1" id="price1" style="width:83px; height:30px").input__price1
+						label(for="price2").input__price-label До
+							input(type="text" name="price2" id="price2" style="width:83px; height:30px").input__price2
+						div(style="margin: 20px 0").slider
+
+		li(class="accordion__item")
+			a(href="#" class="accordion__trigger")= accordion[3]
+			ul.accordion__inner_list
+				li.accordion__inner_item
+					ul.color__list
+						- var color = ['fff','ccc','000','0a3153','ff1800','fff343','fb914a','92c37c','40a6ff','9870ad','dc78ad','7f401d'];
+						each item in color
+							li.color__item
+								a(href="#" class="color__" + ( ( item == 'ccc' ) ? 'link-active' : 'link' ) style="background: #" + item)
+		li(class="accordion__item")
+			a(href="#" class="accordion__trigger")= accordion[4]
+			ul.accordion__inner_list
+				- var os = ['Android','iOS','Windows Mobile','Symbian','Custom']
+				each item, val in os 
+					li.accordion__inner_item
+						input(type="checkbox" name="os" id="os-#{val}").os.input__checkbox
+						label(for="os-#{val}").input__checkbox-label=item
+				div.clear-inputs
+					a(href="#").link__os Сбросить фильтр

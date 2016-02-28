@@ -10,8 +10,8 @@ $(document).ready(function(){
             list = $this.closest('.accordion__list'),
             item = $this.closest('.accordion__item'),
             items = list.find('.accordion__item'),
-            content = item.find('.accordion__inner-list'),
-            otherContent = list.find('.accordion__inner-list')
+            content = item.find('.accordion__inner_list'),
+            otherContent = list.find('.accordion__inner_list')
             duration = 900;
         
         if(!item.hasClass('active')){

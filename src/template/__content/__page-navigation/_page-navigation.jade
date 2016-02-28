@@ -1,0 +1,5 @@
+.pages
+  .pages__backward <
+  - for (var x = 1; x < 3; x++)
+    div(class="pages__" + ( (x == 1) ? 'active' : 'loop' ))= x
+  .pages__forward >

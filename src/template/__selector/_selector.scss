@@ -1,6 +1,10 @@
 .select {
 	margin: 0 0 20px;
-	
+	padding: 10px;
+	background: $colorLightBlue;
+	border: 1px solid $borderColor;
+	border-radius: 10px;
+
 	&__sort {
 		display: inline-block;
 	}
@@ -10,7 +14,7 @@
 }
 .view {
 	&__label {
-		// display: inline-block;
+		display: inline-block;
 		float: left;
 	}
 	&__list {
@@ -23,24 +27,46 @@
       display: inline-block;
       position: relative;
       width: 26px;
-      height: 16px;
+      height: 26px;
       // padding-left: 20px;
 	}
-	&__item:before {
+	&__link:before {
       content: '';
       display: block;
-      margin: 5px;
+      position: absolute;
       width: 16px;
       height: 16px;
       background-image: url('/img/spritesheet.png');
 	}
 	&__1:before {
-      background-position: 0 -52px;
+      background-position: -60px -21px;
 	}
 	&__2:before {
-      background-position: -60px -21px;
+      background-position: -42px -52px,
 	}	
 	&__3:before {
-      background-position: -60px 0;
-	}		
+      background-position: 0px -52px,
+	}
+	&__item_1:hover &__1:before {
+		background-position: -60px 0px;
+	}	
+	&__item_2:hover &__2:before {
+		background-position: -81px 0px;
+	}
+	&__item_3:hover &__3:before {
+		background-position: -21px -52px;
+	}
+	&__active-1:before {
+		background-position: -60px 0px;
+	}
+
+	&__active-1:before {
+		background-position: -60px 0px;
+	}	
+	&__active-2:before {
+		background-position: -81px 0px;
+	}
+	&__active-3:before {
+		background-position: -21px -52px;
+	}
 }

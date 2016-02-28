@@ -1,0 +1,21 @@
+.columnizer {
+    
+    // margin-top: 20px;
+
+    p {
+        text-indent: 35px;
+        font: 14px/20px $regular;
+    }
+    .column {
+        text-align: justify;
+
+        &.first {
+            float: left;
+            padding-right: 20px;
+        }
+        &.last {
+            float: right;
+            padding-left: 20px;
+        }
+    }
+}

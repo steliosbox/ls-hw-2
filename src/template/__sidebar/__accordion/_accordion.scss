@@ -25,7 +25,7 @@
 
 
 .accordion {
-	margin-top: 20px; 
+	margin-top: 40px; 
 
 	&__list {
 		border: 1px solid $borderColor;
@@ -34,9 +34,13 @@
 	}
 	&__item {
 		background: $colorLight;
+		border-top: 1px solid $borderColor;
+	}
+	&__item:first-child {
+		border-top: none;
 	}
 	&__trigger {
-		padding: 15px 30px;
+		padding: 15px 30px 10px;
 		display: block;
 		color: $colorDark;
 		font: 16px/16px $semibold;
@@ -52,53 +56,60 @@
 	}
 }
 .input {
+	$radioWidth: 19px;
+	$radioBorder: 3px;
+	$radioSpaceBetween: 3px;
+
+	&__checkbox,
 	&__radio {
 		// opacity: 0;
 		display: none;
 	}
-	
+
 	&__radio-label,
-	&__checkbox {
-		
+	&__checkbox-label {
+		position: relative;
+		font: 14px/14px $regular;
+		color: $colorDark;
+		display: block;
+		box-sizing: border-box;
+		margin-left: 10px;
 		&:hover {
 			cursor: pointer;
 		}
-
-		$radioWidth: 19px;
-		$radioBorder: 3px;
-		$radioSpaceBetween: 3px;
-		
-		position: relative;
-		padding-left: 29px;
-		padding-top: 2px;	
-		min-height: $radioWidth;
-		display: block;
-		box-sizing: border-box;
-
 		&:before {
 			content: '';
 			display: block;
 			position: absolute;
-			width: $radioWidth;
-			height: $radioWidth;
-			box-sizing: border-box;		
-			background: $colorLight;
-			border: $radioBorder solid $colorOrange;
-			border-radius: 50%;
+			box-sizing: border-box;
 			top: 50%;
 			left: 0;
-			transform: translate(-50%,-50%);	
+			transform: translate(-50%,-50%);
+		}
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			box-sizing: border-box;
+		}
+	}
+	&__radio-label {
+		padding-left: 20px;
+		padding-top: 2px;	
+		min-height: $radioWidth;
+		&:before {
+			width: $radioWidth;
+			height: $radioWidth;	
+			background: $colorLight;
+			border: $radioBorder solid $borderColor;
+			border-radius: 50%;	
 		}
 		.input__radio:checked  + &:before {
 			border: $radioBorder solid $colorOrange;
 		}
 		.input__radio:checked  + &:after {
-			content: '';
-			display: block;
-			position: absolute;
 			width: $radioWidth - 10px;
-			height: $radioWidth - 10px;
-			box-sizing: border-box;	
+			height: $radioWidth - 10px;	
 			border-radius: 50%;
 			border: $radioBorder solid $colorOrange;
 			background: $colorOrange;
@@ -107,4 +118,83 @@
 			transform: translate(-50%,-50%);
 		}
 	}
+	&__checkbox-label {
+		padding-left: 20px;
+		padding-top: 2px;	
+		min-height: $radioWidth;
+		&:before {
+			width: $radioWidth;
+			height: $radioWidth;
+			border-radius: 5px;	
+			background-color: #dee1e4;
+		}
+		.input__checkbox:checked  + &:before {
+			background: $colorOrange;
+		}
+		.input__checkbox:checked  + &:after {
+			border-top: 3px solid #fff;
+			border-right: 3px solid #fff;
+			transform: rotate(125deg) skew(0,0) translate(-50%, 0);
+			height: 7px;
+			width: 9px;
+			left: -7px;
+			top: 50%;
+			// top: 4px;
+			// left: 0;
+			// transform: ;		
+		}	
+	}
 }
+
+.clear-inputs {
+	padding: 0 30px 20px 30px;
+	
+	.link {
+		&__brend,
+		&__os {
+			
+			color: #5db2fc;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}		
+	}
+}
+
+.color {
+
+	&__list {
+		margin-top: -22px;
+		margin-left: -22px;
+	}
+	&__item {
+		display: inline-block;
+
+	}
+	&__link {
+		display: block;
+		width: 37px;
+		height: 37px;
+		border: 1px solid $borderColor;
+		margin-top: 22px;
+		margin-left: 22px;
+	}
+	&__link-active {
+		@extend .color__link;
+		border-width: 2.5px;
+		border-color: rgb(255, 102, 0);
+		border-style: solid;
+		border-radius: 2px;
+	}
+	&__link:hover {
+		border-width: 1.5px;
+		border-color: rgb(255, 102, 0);
+		border-style: solid;
+
+	}
+}
+
+
+
+

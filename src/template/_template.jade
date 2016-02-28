@@ -1,4 +1,4 @@
-- var footer_menu = ['Планшеты','Мобильные телефоны','Mp3 плееры','Персональные компьютеры','Ноутбуки','Аксессуары','Бытовая техника'];
+
 - var m__social_big = ['facebook', 'vkontakte', 'twitter'];
 - var m__social = ['facebook', 'vkontakte', 'twitter'];
 <!DOCTYPE html>
@@ -14,6 +14,7 @@ html
         //- CSS
         link(rel="stylesheet", href="/bower/normalize-css/normalize.css")
         link(rel="stylesheet", href="/css/global.css")
+        link(rel="stylesheet", href="/css/jquery-ui.css")
         //- Заголовок сайта
         block title
     body
@@ -21,31 +22,31 @@ html
             include __header/_header
             include __nav/_nav
             include __breadcrumbs/_breadcrumbs
+            div.inner
+                div.page__title Мобильные телефоны
             div.main
                 div.inner.clearfix
-                    div.page__title Мобильные телефоны
                     aside.side-bar
                         include __sidebar/_sidebar
                     section.main-bar
                         //- block main-bar
                         include __selector/_selector
                         include __content/_content
+            div.inner
+                div.page__title Важная информация
+            div.inner
+                include __columnizer/_columnizer
+
         footer.footer
             div.inner
-                .div.clearfix
-                    .footer__aside
-                        include __logo_white/_logo_white
-                    .footer__bside 
-                        include __social_big/_social_big
-                        nav.footer__menu
-                            ul.footer__menu-list
-                                each item in footer_menu
-                                    li.footer__menu_item
-                                        a(href="#").footer__menu_link= item
-                
-                .copyright All rights reserved. 2015. no copy alowed
+                include __footer/_footer
 
         //- JS
         script(src="./bower/jquery/jquery.js")
+        script(src="./bower/jquery-ui/jquery-ui.js")
         script(src="./js/accordion.js")
+        script(src="./js/slider.js")
+        script(src="./js/checkbox_clean.js")
         script(src="./js/rating.js")
+        script(src="./js/jquery.columnizer.js")
+        script(src="./js/main.js")
