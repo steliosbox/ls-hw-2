@@ -19,17 +19,26 @@ img {
     .product {
 
         &__list {
-          @include hide-text();
+            @include hide-text();
+            box-sizing: border-box;
         }
         &__item {
-            border: 1px solid $borderColor;
-            @include border-radius(5px);
-            overflow: hidden;
-            padding: $heightPadding $widthPadding;
-            box-sizing: border-box;
             width: 100%;
-            background: white;
             display: table;
+            background: white;
+            border: 1px solid $borderColor;
+            padding: $heightPadding $widthPadding;
+            &:not(:first-child) {
+                border-top: 0;
+            }
+            &:first-child {
+                @include border-radius(5px 5px 0 0);
+                overflow: hidden;
+            }
+            &:last-child {
+                @include border-radius(0 0 5px 5px);
+                overflow: hidden;               
+            }
             &:hover {
                 box-shadow: 0px 1px 5.7px 0.3px rgba(118, 118, 118, 0.75);
                 position: relative;
@@ -72,7 +81,7 @@ img {
     }
     //========== Описание продукции #1 of 3 ==========
     .about_title {
-        width: 285px;
+        width: 255px;
         text-align: left;
         margin: 10px 0;
         padding: 0 10px;
@@ -85,11 +94,16 @@ img {
         color: $colorDark;
         display: table-row;
         .cost {
+            width: 130px;
             display: table-cell;
             vertical-align: middle;
-            font: 20px/20px $bold;
+            font: 20px/20px $semibold;
+            text-align: right;
             color: $colorDark;
-            width: 100px;
+            .rubl {
+                font-family: $rubl;
+                margin-left: 5px;
+            }
         }
         button {
             display: table-cell;
@@ -107,6 +121,7 @@ img {
             display: table-cell;
             vertical-align: middle;
             width: 100px;
+            padding-left: 20px;
             .status {
                 position: relative;
                 font: 12px/20px $bold;

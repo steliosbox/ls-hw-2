@@ -1,34 +1,91 @@
 .select {
 	margin: 0 0 20px;
-	padding: 10px;
+	// padding: 10px;
 	background: $colorLightBlue;
 	border: 1px solid $borderColor;
-	border-radius: 10px;
+	@include border-radius(5px);
+	@include clearfix();
 
 	&__sort {
-		display: inline-block;
+		float: left;
+		@include inline-block(middle);
+		margin-top: 10px;
+		margin-left: 20px;
 	}
 	&__view {
 		float: right;
+		// @include inline-block(middle);
+	}
+}
+.sort{
+	&__label {
+		float: left;
+		margin-top: 3px;
+		margin-left: 3px;
+		font: 14px/20px $regular;
+		color: #5d656c;
+	}
+	&__outer {
+		float: right;
+		margin-left: 10px;
+		margin-left: 10px;
+		border: 1px solid $borderColor;
+		@include border-radius(4px);
+		overflow: hidden;		/* Кнопка будет находиться за пределами "обертки" */
+		background: #fff;
+		width: 140px;		/* На 20px меньше, чем у select'а. Примерно такова ширина стандартной кнопки */
+		// display: inline-block;
+		position: relative;		/* Чтобы элементы с position:absolute позиционировались по "обертке" */
+		
+		select {
+			cursor: pointer;
+			width: 140px;
+			border: none;
+		    outline: none;
+			// height: 22px;
+			padding: 2px 10px;
+			line-height: 22px;
+			position: relative;		/* Это нужно, чтобы работал z-index */
+			background: none;		/* Через прозрачный фон будет видно кнопку */
+			z-index: 100;
+			-webkit-appearance: none;
+		    -moz-appearance: none;
+		    border: none;
+		    font: 14px/20px $light;
+		    color: #7f7f7f;
+		}	
+	}
+	&__button {
+		background: url('/img/arrow-down.png') center center no-repeat;
+		height: 24px;		/* Размеры подготовленной картинки */
+		width: 24px;
+		position: absolute;		/* Размещаем объект по правому краю */
+		right: 0;
+		top: 0;
+		bottom: 0;
+		z-index: 50;		/* И спускаем его на нижний слой - чтобы ссылка */
 	}
 }
 .view {
 	&__label {
-		display: inline-block;
+		// @include inline-block(middle);
 		float: left;
+		margin-top: 16px;
+		font: 14px/20px $regular;
+		color: #5d656c;
 	}
 	&__list {
-		display: inline-block;
-	    font: 0/0 serif;
-	    text-shadow: none;
-	    color: transparent;
+		@include hide-text();
+		@include inline-block(middel);
+		float: right;
+		margin-left: 14px;
 	}
 	&__item {
-      display: inline-block;
+      @include inline-block(middle);
       position: relative;
-      width: 26px;
-      height: 26px;
-      // padding-left: 20px;
+      width: 52px;
+      height: 52px;
+      border-left: 1px solid $borderColor;
 	}
 	&__link:before {
       content: '';
@@ -36,6 +93,9 @@
       position: absolute;
       width: 16px;
       height: 16px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
       background-image: url('/img/spritesheet.png');
 	}
 	&__1:before {

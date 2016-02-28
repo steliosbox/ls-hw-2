@@ -1,11 +1,14 @@
 div.select.clearfix
 	div.select__sort
-		label Сортировать по
-		select(name="sort")
-			option(value="price") select 1
-			option(value="value") select 2
+		div.sort__label Сортировать по
+		div.sort__outer
+			select(name="sort" id="sort").sort__select
+				option(value="price" selected) по цена
+				option(value="price2") Цена 2
+				option(value="price3") Цена 3
+			a(href="#").sort__button
 
-	div.select__view.clearfix
+	div.select__view
 		div.view__label Вид каталога
 		ul.view__list
 			li.view__item.view__item_1

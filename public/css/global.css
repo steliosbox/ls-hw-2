@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: 'open_sansbold';
   src: url("/fonts/opensans-bold-webfont.eot");
@@ -65,6 +66,13 @@
   font-family: 'open_sanssemibold_italic';
   src: url("/fonts/opensans-semibolditalic-webfont.eot");
   src: url("/fonts/opensans-semibolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/opensans-semibolditalic-webfont.woff2") format("woff2"), url("/fonts/opensans-semibolditalic-webfont.woff") format("woff"), url("/fonts/opensans-semibolditalic-webfont.ttf") format("truetype"), url("/fonts/opensans-semibolditalic-webfont.svg#open_sanssemibold_italic") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'als_rublregular';
+  src: url("/fonts/rubl/rouble-webfont.eot");
+  src: url("/fonts/rubl/rouble-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/rubl/rouble-webfont.woff2") format("woff2"), url("/fonts/rubl/rouble-webfont.woff") format("woff"), url("/fonts/rubl/rouble-webfont.ttf") format("truetype"), url("/fonts/rubl/rouble-webfont.svg#als_rublregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -138,7 +146,8 @@ ul {
 div.wrapper {
   height: auto;
   min-height: 100%;
-  min-width: 100%;
+  min-width: 1100px;
+  width: 100%;
   position: relative;
   padding-bottom: 20px; }
 
@@ -153,7 +162,8 @@ div.wrapper {
 
 .header__top {
   background: #fff;
-  border-bottom: 2px solid #ebedef; }
+  border-bottom: 2px solid #ebedef;
+  min-width: 100%; }
 
 .social__small {
   float: left;
@@ -226,7 +236,7 @@ div.wrapper {
     background-position: -102px -34px; }
 
 .phone {
-  margin-left: 76px;
+  margin-left: 107px;
   position: relative;
   display: inline-block; }
   .phone:before {
@@ -246,7 +256,36 @@ div.wrapper {
 
 .logo_orange {
   display: inline-block;
+  float: left;
   padding: 28px 0 27px; }
+
+.search {
+  display: inline-block;
+  position: relative;
+  float: left;
+  padding: 29px 0 27px;
+  margin-left: 56px; }
+  .search__input {
+    width: 290px;
+    height: 34px;
+    padding: 0 17px;
+    box-sizing: border-box;
+    outline: none;
+    border: 1px solid #ebedef;
+    border-radius: 5px 0 0 5px;
+    font: 14px/34px "open_sanslight", Arial, "sans-serif";
+    color: #7f7f7f; }
+  .search__button {
+    height: 34px;
+    margin-left: -5px;
+    padding: 0 15px;
+    border: 0;
+    outline: none;
+    background: #ff6e35;
+    font-size: 16px;
+    font-family: "open_sanssemibold", Arial, "sans-serif";
+    color: #fff;
+    border-radius: 0 5px 5px 0; }
 
 .mini_menu {
   float: right;
@@ -357,7 +396,7 @@ div.wrapper {
   text-decoration: none; }
 
 .accordion {
-  margin-top: 40px; }
+  margin-top: 38px; }
   .accordion__list {
     border: 1px solid #ebedef;
     border-radius: 5px;
@@ -368,11 +407,22 @@ div.wrapper {
   .accordion__item:first-child {
     border-top: none; }
   .accordion__trigger {
-    padding: 15px 30px 10px;
+    padding: 15px 20px 10px 28px;
     display: block;
     color: #333;
     font: 16px/16px "open_sanssemibold", Arial, "sans-serif";
     text-decoration: none; }
+    .accordion__trigger-arrow {
+      font: 0/0 serif;
+      text-shadow: none;
+      color: transparent;
+      float: right;
+      width: 18px;
+      height: 11px;
+      background: url(/img/spritesheet.png) no-repeat 0 -73px; }
+
+.accordion__inner_list {
+  display: none; }
 
 .accordion__inner_item {
   padding: 10px 30px; }
@@ -501,30 +551,96 @@ div.wrapper {
 
 .select {
   margin: 0 0 20px;
-  padding: 10px;
   background: #d9e5ea;
   border: 1px solid #ebedef;
-  border-radius: 10px; }
+  border-radius: 5px; }
+  .select:before, .select:after {
+    content: '';
+    display: table; }
+  .select:after {
+    clear: both; }
   .select__sort {
-    display: inline-block; }
+    float: left;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 10px;
+    margin-left: 20px; }
   .select__view {
     float: right; }
 
+.sort__label {
+  float: left;
+  margin-top: 3px;
+  margin-left: 3px;
+  font: 14px/20px "open_sansregular", Arial, "sans-serif";
+  color: #5d656c; }
+
+.sort__outer {
+  float: right;
+  margin-left: 10px;
+  margin-left: 10px;
+  border: 1px solid #ebedef;
+  border-radius: 4px;
+  overflow: hidden;
+  /* Кнопка будет находиться за пределами "обертки" */
+  background: #fff;
+  width: 140px;
+  /* На 20px меньше, чем у select'а. Примерно такова ширина стандартной кнопки */
+  position: relative;
+  /* Чтобы элементы с position:absolute позиционировались по "обертке" */ }
+  .sort__outer select {
+    cursor: pointer;
+    width: 140px;
+    border: none;
+    outline: none;
+    padding: 2px 10px;
+    line-height: 22px;
+    position: relative;
+    /* Это нужно, чтобы работал z-index */
+    background: none;
+    /* Через прозрачный фон будет видно кнопку */
+    z-index: 100;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    font: 14px/20px "open_sanslight", Arial, "sans-serif";
+    color: #7f7f7f; }
+
+.sort__button {
+  background: url("/img/arrow-down.png") center center no-repeat;
+  height: 24px;
+  /* Размеры подготовленной картинки */
+  width: 24px;
+  position: absolute;
+  /* Размещаем объект по правому краю */
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 50;
+  /* И спускаем его на нижний слой - чтобы ссылка */ }
+
 .view__label {
-  display: inline-block;
-  float: left; }
+  float: left;
+  margin-top: 16px;
+  font: 14px/20px "open_sansregular", Arial, "sans-serif";
+  color: #5d656c; }
 
 .view__list {
-  display: inline-block;
   font: 0/0 serif;
   text-shadow: none;
-  color: transparent; }
+  color: transparent;
+  display: inline-block;
+  vertical-align: middel;
+  float: right;
+  margin-left: 14px; }
 
 .view__item {
   display: inline-block;
+  vertical-align: middle;
   position: relative;
-  width: 26px;
-  height: 26px; }
+  width: 52px;
+  height: 52px;
+  border-left: 1px solid #ebedef; }
 
 .view__link:before {
   content: '';
@@ -532,6 +648,9 @@ div.wrapper {
   position: absolute;
   width: 16px;
   height: 16px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-image: url("/img/spritesheet.png"); }
 
 .view__1:before {
@@ -569,22 +688,29 @@ img {
   max-height: 100%;
   height: auto; }
 
-.product__view-1 .product {
+.product__view-1 .product__list {
   font: 0/0 serif;
   text-shadow: none;
-  color: transparent; }
-  .product__view-1 .product__item {
-    display: table;
-    border: 1px solid #ebedef;
-    border-radius: 5px;
-    overflow: hidden;
-    padding: 15px 20px;
-    box-sizing: border-box;
-    width: 100%;
-    background: white; }
-    .product__view-1 .product__item:hover {
-      box-shadow: 0px 1px 5.7px 0.3px rgba(118, 118, 118, 0.75);
-      position: relative; }
+  color: transparent;
+  box-sizing: border-box; }
+
+.product__view-1 .product__item {
+  width: 100%;
+  display: table;
+  background: white;
+  border: 1px solid #ebedef;
+  padding: 15px 20px; }
+  .product__view-1 .product__item:not(:first-child) {
+    border-top: 0; }
+  .product__view-1 .product__item:first-child {
+    border-radius: 5px 5px 0 0;
+    overflow: hidden; }
+  .product__view-1 .product__item:last-child {
+    border-radius: 0 0 5px 5px;
+    overflow: hidden; }
+  .product__view-1 .product__item:hover {
+    box-shadow: 0px 1px 5.7px 0.3px rgba(118, 118, 118, 0.75);
+    position: relative; }
 
 .product__view-1 .inner__product_list {
   display: table-row; }
@@ -594,11 +720,11 @@ img {
   vertical-align: top; }
 
 .product__view-1 .inner__product_img {
-  width: 136px;
+  width: 140px;
   vertical-align: middle; }
 
 .product__view-1 .inner__product_about {
-  padding: 0 20px; }
+  padding: 0 25px; }
 
 .product__view-1 .inner__product_price {
   width: 150px;
@@ -642,7 +768,7 @@ img {
     transform: translate(-50%, -50%); }
 
 .product__view-1 .artical {
-  margin-top: 15px;
+  margin-top: 4px;
   text-align: center; }
   .product__view-1 .artical strong {
     font: 12px/20px "open_sansbold", Arial, "sans-serif";
@@ -654,7 +780,7 @@ img {
 
 .product__view-1 .about_title {
   text-align: left;
-  margin: 10px 0;
+  margin: 10px 0 17px;
   font: 16px/20px "open_sanssemibold", Arial, "sans-serif";
   color: #000; }
 
@@ -694,7 +820,10 @@ img {
     display: inline-block;
     vertical-align: top;
     width: 16px;
-    height: 15px; }
+    height: 15px;
+    margin-left: 2px; }
+    .product__view-1 .rating__item:first-child {
+      margin-left: 0; }
   .product__view-1 .rating__star-red {
     background: url("/img/stars-s194e70acee.png") no-repeat 0 0; }
   .product__view-1 .rating__star-grey {
@@ -712,15 +841,18 @@ img {
 
 .product__view-1 .price .cost {
   position: absolute;
-  font: 20px/20px "open_sansbold", Arial, "sans-serif";
+  font: 20px/20px "open_sanssemibold", Arial, "sans-serif";
   color: #333;
-  top: 0;
+  top: 7px;
   right: 0; }
+  .product__view-1 .price .cost .rubl {
+    font-family: "als_rublregular", Arial, "sans-serif";
+    margin-left: 5px; }
 
 .product__view-1 .price button {
   position: absolute;
-  bottom: 30px;
-  right: 0;
+  bottom: 28px;
+  right: 5px;
   font: 14px/20px "open_sansbold", Arial, "sans-serif";
   color: #fff;
   width: 103px;
@@ -732,8 +864,8 @@ img {
 
 .product__view-1 .price .col-avelibility {
   position: absolute;
-  bottom: 0;
-  right: 0; }
+  bottom: 3px;
+  right: 5px; }
   .product__view-1 .price .col-avelibility .status {
     position: relative;
     font: 12px/20px "open_sansbold", Arial, "sans-serif";
@@ -885,11 +1017,14 @@ img {
     border-radius: 10px; }
 
 .product__view-2 .price .cost {
-  font: 20px/20px "open_sansbold", Arial, "sans-serif";
+  font: 20px/20px "open_sanssemibold", Arial, "sans-serif";
   color: #333;
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px; }
+  .product__view-2 .price .cost .rubl {
+    font-family: "als_rublregular", Arial, "sans-serif";
+    margin-left: 5px; }
 
 .product__view-2 .price button {
   font: 14px/20px "open_sansbold", Arial, "sans-serif";
@@ -934,17 +1069,23 @@ img {
 .product__view-3 .product__list {
   font: 0/0 serif;
   text-shadow: none;
-  color: transparent; }
+  color: transparent;
+  box-sizing: border-box; }
 
 .product__view-3 .product__item {
-  border: 1px solid #ebedef;
-  border-radius: 5px;
-  overflow: hidden;
-  padding: 10px 10px;
-  box-sizing: border-box;
   width: 100%;
+  display: table;
   background: white;
-  display: table; }
+  border: 1px solid #ebedef;
+  padding: 10px 10px; }
+  .product__view-3 .product__item:not(:first-child) {
+    border-top: 0; }
+  .product__view-3 .product__item:first-child {
+    border-radius: 5px 5px 0 0;
+    overflow: hidden; }
+  .product__view-3 .product__item:last-child {
+    border-radius: 0 0 5px 5px;
+    overflow: hidden; }
   .product__view-3 .product__item:hover {
     box-shadow: 0px 1px 5.7px 0.3px rgba(118, 118, 118, 0.75);
     position: relative; }
@@ -973,7 +1114,7 @@ img {
     margin-left: 5px; }
 
 .product__view-3 .about_title {
-  width: 285px;
+  width: 255px;
   text-align: left;
   margin: 10px 0;
   padding: 0 10px;
@@ -984,11 +1125,15 @@ img {
   color: #333;
   display: table-row; }
   .product__view-3 .price .cost {
+    width: 130px;
     display: table-cell;
     vertical-align: middle;
-    font: 20px/20px "open_sansbold", Arial, "sans-serif";
-    color: #333;
-    width: 100px; }
+    font: 20px/20px "open_sanssemibold", Arial, "sans-serif";
+    text-align: right;
+    color: #333; }
+    .product__view-3 .price .cost .rubl {
+      font-family: "als_rublregular", Arial, "sans-serif";
+      margin-left: 5px; }
   .product__view-3 .price button {
     display: table-cell;
     vertical-align: middle;
@@ -1003,7 +1148,8 @@ img {
   .product__view-3 .price .col-avelibility {
     display: table-cell;
     vertical-align: middle;
-    width: 100px; }
+    width: 100px;
+    padding-left: 20px; }
     .product__view-3 .price .col-avelibility .status {
       position: relative;
       font: 12px/20px "open_sansbold", Arial, "sans-serif";

@@ -10,20 +10,27 @@ img {
 .product__view-1 {
     
     .product {
-          @include hide-text();
-
         &__list {
+            @include hide-text();
+            box-sizing: border-box;
         }
         &__item {
-            display: table;
-            border: 1px solid $borderColor;
-            @include border-radius(5px);
-            overflow: hidden;
-            padding: $heightPadding $widthPadding;
-            box-sizing: border-box;
             width: 100%;
+            display: table;
             background: white;
-            
+            border: 1px solid $borderColor;
+            padding: $heightPadding $widthPadding;
+            &:not(:first-child) {
+                border-top: 0;
+            }
+            &:first-child {
+                @include border-radius(5px 5px 0 0);
+                overflow: hidden;
+            }
+            &:last-child {
+                @include border-radius(0 0 5px 5px);
+                overflow: hidden;               
+            }
             &:hover {
                 box-shadow: 0px 1px 5.7px 0.3px rgba(118, 118, 118, 0.75);
                 position: relative;
@@ -40,11 +47,11 @@ img {
             vertical-align: top;
         }
         &_img {
-            width: 136px;
+            width: 140px;
             vertical-align: middle;
         }
         &_about {
-            padding: 0 20px;
+            padding: 0 25px;
         }
         &_price {
             width: 150px;
@@ -92,7 +99,7 @@ img {
     }
     //- ===== Артикль продукта
     .artical {
-        margin-top: 15px;
+        margin-top: 4px;
         text-align: center;
 
         strong {
@@ -108,7 +115,7 @@ img {
     //========== Описание продукции #1 of 3 ==========
     .about_title {
         text-align: left;
-        margin: 10px 0;
+        margin: 10px 0 17px;
         font: 16px/20px $semibold;
         color: #000;
     }
@@ -147,6 +154,10 @@ img {
             @include inline-block(top);
             width: 16px;
             height: 15px;
+            margin-left: 2px;
+            &:first-child {
+                margin-left: 0;
+            }
         }
         &__star-red {
             background: url('/img/stars-s194e70acee.png') no-repeat 0 0;
@@ -170,15 +181,19 @@ img {
     .price {
         .cost {
             position: absolute;
-            font: 20px/20px $bold;
+            font: 20px/20px $semibold;
             color: $colorDark;
-            top: 0;
+            top: 7px;
             right: 0;
+            .rubl {
+                font-family: $rubl;
+                margin-left: 5px;
+            }
         }
         button {
             position: absolute;
-            bottom: 30px;
-            right: 0;
+            bottom: 28px;
+            right: 5px;
             font: 14px/20px $bold;
             color: $colorLight;
             width: 103px;
@@ -190,8 +205,8 @@ img {
         }
         .col-avelibility {
             position: absolute;
-            bottom: 0;
-            right: 0;
+            bottom: 3px;
+            right: 5px;
             .status {
                 position: relative;
                 font: 12px/20px $bold;

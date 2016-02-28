@@ -10,6 +10,14 @@ var publicFolder = './public',
     imagesFolder = publicFolder + '/img',
     cssFormat = 'scss';
 
+
+gulp.task('minify', function() {
+  return gulp.src(publicFolder + '/*.html')
+    .pipe($.htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest('./'))
+});
+
+
 // Static Server + watching scss/html files
 gulp.task('server', ['jade', 'sass'], function() {
 
