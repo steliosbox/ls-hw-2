@@ -10,6 +10,7 @@
 		- var accordion = ['Наличие в магазинах','Бренды','Цена','Цвет','Операционные системы']
 		li(class="accordion__item")
 			a(href="#" class="accordion__trigger")= accordion[0]
+				span.accordion__trigger-arrow arrow
 			ul.accordion__inner_list
 				li.accordion__inner_item
 					input(type="radio" name="isset" id="isset-1" checked).input__radio
@@ -20,6 +21,7 @@
 
 		li(class="accordion__item")
 			a(href="#" class="accordion__trigger")= accordion[1]
+				span.accordion__trigger-arrow arrow
 			ul.accordion__inner_list
 				- var brand = ['Lenovo','Apple','Samsung','Asus','Motorola']
 				each item, val in brand 
@@ -31,6 +33,7 @@
 
 		li(class="accordion__item")
 			a(href="#" class="accordion__trigger")= accordion[2]
+				span.accordion__trigger-arrow arrow
 			ul.accordion__inner_list
 				li.accordion__inner_item
 					div.price
@@ -42,6 +45,7 @@
 
 		li(class="accordion__item")
 			a(href="#" class="accordion__trigger")= accordion[3]
+				span.accordion__trigger-arrow arrow
 			ul.accordion__inner_list
 				li.accordion__inner_item
 					ul.color__list
@@ -51,6 +55,7 @@
 								a(href="#" class="color__" + ( ( item == 'ccc' ) ? 'link-active' : 'link' ) style="background: #" + item)
 		li(class="accordion__item")
 			a(href="#" class="accordion__trigger")= accordion[4]
+				span.accordion__trigger-arrow arrow
 			ul.accordion__inner_list
 				- var os = ['Android','iOS','Windows Mobile','Symbian','Custom']
 				each item, val in os 

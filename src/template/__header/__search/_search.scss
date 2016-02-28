@@ -1,0 +1,30 @@
+.search {
+	display: inline-block;
+	position: relative;
+	float: left;
+	padding: 29px 0 27px;
+	margin-left: 56px;
+	&__input {
+		width: 290px;
+		height: 34px;
+		padding: 0 17px;
+		box-sizing: border-box;
+		outline: none;
+		border: 1px solid $borderColor;
+		@include border-radius(5px 0 0 5px);
+		font: 14px/34px $light;
+		color: #7f7f7f;
+	}
+	&__button {
+		height: 34px;
+		margin-left: -5px;
+		padding: 0 15px;
+		border: 0;
+		outline: none;
+		background: $colorOrange;
+		font-size: 16px;
+		font-family: $semibold;
+		color: $colorLight;
+		@include border-radius(0 5px 5px 0);
+	}
+}

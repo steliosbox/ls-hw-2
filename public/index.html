@@ -33,6 +33,12 @@
         <div class="header__bottom"> 
           <div class="inner clearfix">
             <div class="logo_orange"><a href="#"><img src="img/logo-orange.png" alt="logo"/></a></div>
+            <div class="search">
+              <form class="serach__form">
+                <input type="text" name="search" placeholder="Что будем искать" class="search__input"/>
+                <button type="submit" name="seach_batton" class="search__button">Найти</button>
+              </form>
+            </div>
             <div class="mini_menu">
               <ul class="mini_menu__list">
                 <li class="mini_menu__item"><a href="#" class="mini_menu__link mini_menu__map">Карта проезда</a></li>
@@ -78,7 +84,7 @@
             </div>
             <div class="accordion">
               <ul class="accordion__list">
-                <li class="accordion__item"><a href="#" class="accordion__trigger">Наличие в магазинах</a>
+                <li class="accordion__item"><a href="#" class="accordion__trigger">Наличие в магазинах<span class="accordion__trigger-arrow">arrow</span></a>
                   <ul class="accordion__inner_list">
                     <li class="accordion__inner_item">
                       <input type="radio" name="isset" id="isset-1" checked="checked" class="input__radio"/>
@@ -90,7 +96,7 @@
                     </li>
                   </ul>
                 </li>
-                <li class="accordion__item"><a href="#" class="accordion__trigger">Бренды</a>
+                <li class="accordion__item"><a href="#" class="accordion__trigger">Бренды<span class="accordion__trigger-arrow">arrow</span></a>
                   <ul class="accordion__inner_list">
                     <li class="accordion__inner_item">
                       <input type="checkbox" name="brend" id="brend-0" class="brend input__checkbox"/>
@@ -115,7 +121,7 @@
                     <div class="clear-inputs"><a href="#" class="link__brend">Сбросить фильтр</a></div>
                   </ul>
                 </li>
-                <li class="accordion__item"><a href="#" class="accordion__trigger">Цена</a>
+                <li class="accordion__item"><a href="#" class="accordion__trigger">Цена<span class="accordion__trigger-arrow">arrow</span></a>
                   <ul class="accordion__inner_list">
                     <li class="accordion__inner_item">
                       <div class="price">
@@ -130,7 +136,7 @@
                     </li>
                   </ul>
                 </li>
-                <li class="accordion__item"><a href="#" class="accordion__trigger">Цвет</a>
+                <li class="accordion__item"><a href="#" class="accordion__trigger">Цвет<span class="accordion__trigger-arrow">arrow</span></a>
                   <ul class="accordion__inner_list">
                     <li class="accordion__inner_item">
                       <ul class="color__list">
@@ -150,7 +156,7 @@
                     </li>
                   </ul>
                 </li>
-                <li class="accordion__item"><a href="#" class="accordion__trigger">Операционные системы</a>
+                <li class="accordion__item"><a href="#" class="accordion__trigger">Операционные системы<span class="accordion__trigger-arrow">arrow</span></a>
                   <ul class="accordion__inner_list">
                     <li class="accordion__inner_item">
                       <input type="checkbox" name="os" id="os-0" class="os input__checkbox"/>
@@ -181,13 +187,16 @@
           <section class="main-bar">
             <div class="select clearfix">
               <div class="select__sort">
-                <label>Сортировать по</label>
-                <select name="sort">
-                  <option value="price">select 1</option>
-                  <option value="value">select 2</option>
-                </select>
+                <div class="sort__label">Сортировать по</div>
+                <div class="sort__outer">
+                  <select name="sort" id="sort" class="sort__select">
+                    <option value="price" selected="selected">по цена</option>
+                    <option value="price2">Цена 2</option>
+                    <option value="price3">Цена 3</option>
+                  </select><a href="#" class="sort__button"></a>
+                </div>
               </div>
-              <div class="select__view clearfix">
+              <div class="select__view">
                 <div class="view__label">Вид каталога</div>
                 <ul class="view__list">
                   <li class="view__item view__item_1"><a href="#1" class="view__link view__1 view__active-1">1</a></li>
@@ -212,9 +221,7 @@
                     <li class="inner__product_item inner__product_about">
                       <div class="about_title">Samsung GT-I9301I GALAXY S 3</div>
                       <ul class="description__list description-1">
-                        <li class="description__item">
-                          <p>Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц...</p>
-                        </li>
+                        <li class="description__item">Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц...</li>
                       </ul>
                       <ul class="description__list description-2 clearfix">
                         <li class="description__item grey"><strong>Тип SIM-карты</strong><span>Micro-SIM</span></li>
@@ -238,7 +245,7 @@
                     </li>
                     <li class="inner__product_item inner__product_price">
                       <div class="price clearfix">
-                        <div class="cost">11 290 г</div>
+                        <div class="cost">11 290<span class="rubl">a</span></div>
                         <div class="col-avelibility">
                           <div class="status">В наличии</div>
                         </div>
@@ -261,9 +268,7 @@
                     <li class="inner__product_item inner__product_about">
                       <div class="about_title">Microsoft Lumia 640 RM-1077</div>
                       <ul class="description__list description-1">
-                        <li class="description__item">
-                          <p>Вместе с новой Microsoft Lumia 640 Dual SIM (RM-1077) вы открываете мир ярких цифровых возможностей. Этот многофункциональный смартфон уже содержит набор бесплатных сервисов Microsoft...</p>
-                        </li>
+                        <li class="description__item">Вместе с новой Microsoft Lumia 640 Dual SIM (RM-1077) вы открываете мир ярких цифровых возможностей. Этот многофункциональный смартфон уже содержит набор бесплатных сервисов Microsoft...</li>
                       </ul>
                       <ul class="description__list description-2 clearfix">
                         <li class="description__item grey"><strong>Тип SIM-карты</strong><span>Micro-SIM</span></li>
@@ -287,7 +292,7 @@
                     </li>
                     <li class="inner__product_item inner__product_price">
                       <div class="price clearfix">
-                        <div class="cost">10 990 г</div>
+                        <div class="cost">10 990<span class="rubl">a</span></div>
                         <div class="col-avelibility">
                           <div class="status">В наличии</div>
                         </div>
@@ -310,9 +315,7 @@
                     <li class="inner__product_item inner__product_about">
                       <div class="about_title">Archos 50 Oxygen Plus</div>
                       <ul class="description__list description-1">
-                        <li class="description__item">
-                          <p>Смартфон Archos 50 Oxygen Plus, серый. Моноблок, Micro-SIM, Android , 3G, Bluetooth, USB-подключение к ПК, Wi-Fi, Разрешение основной камеры 8 Мп...</p>
-                        </li>
+                        <li class="description__item">Смартфон Archos 50 Oxygen Plus, серый. Моноблок, Micro-SIM, Android , 3G, Bluetooth, USB-подключение к ПК, Wi-Fi, Разрешение основной камеры 8 Мп...</li>
                       </ul>
                       <ul class="description__list description-2 clearfix">
                         <li class="description__item grey"><strong>Тип SIM-карты</strong><span>Micro-SIM</span></li>
@@ -336,7 +339,7 @@
                     </li>
                     <li class="inner__product_item inner__product_price">
                       <div class="price clearfix">
-                        <div class="cost">9 900 г</div>
+                        <div class="cost">9 900<span class="rubl">a</span></div>
                         <div class="col-avelibility">
                           <div class="status">В наличии</div>
                         </div>
@@ -359,9 +362,7 @@
                     <li class="inner__product_item inner__product_about">
                       <div class="about_title">Philips S398 Black</div>
                       <ul class="description__list description-1">
-                        <li class="description__item">
-                          <p>Смартфон Philips S398 Black. Черный корпус и разнообразие цветных панелей для Philips S398 как нельзя лучше подчеркнут ваш статус и уверенность в себе. Преимущества этой модели...</p>
-                        </li>
+                        <li class="description__item">Смартфон Philips S398 Black. Черный корпус и разнообразие цветных панелей для Philips S398 как нельзя лучше подчеркнут ваш статус и уверенность в себе. Преимущества этой модели...</li>
                       </ul>
                       <ul class="description__list description-2 clearfix">
                         <li class="description__item grey"><strong>Тип SIM-карты</strong><span>Micro-SIM</span></li>
@@ -385,7 +386,7 @@
                     </li>
                     <li class="inner__product_item inner__product_price">
                       <div class="price clearfix">
-                        <div class="cost">8 990 г</div>
+                        <div class="cost">8 990<span class="rubl">a</span></div>
                         <div class="col-avelibility">
                           <div class="status">В наличии</div>
                         </div>
@@ -408,9 +409,7 @@
                     <li class="inner__product_item inner__product_about">
                       <div class="about_title">Microsoft Lumia 430 RM-1099</div>
                       <ul class="description__list description-1">
-                        <li class="description__item">
-                          <p>Смартфон Microsoft Lumia 430 RM-1099 black Куда бы вы ни направлялись, смартфон должен быть надежным спутником. Поэтому у Microsoft Lumia 430 Dual SIM (RM-1099) удобный компактный корпус ...</p>
-                        </li>
+                        <li class="description__item">Смартфон Microsoft Lumia 430 RM-1099 black Куда бы вы ни направлялись, смартфон должен быть надежным спутником. Поэтому у Microsoft Lumia 430 Dual SIM (RM-1099) удобный компактный корпус ...</li>
                       </ul>
                       <ul class="description__list description-2 clearfix">
                         <li class="description__item grey"><strong>Тип SIM-карты</strong><span>Micro-SIM</span></li>
@@ -434,7 +433,7 @@
                     </li>
                     <li class="inner__product_item inner__product_price">
                       <div class="price clearfix">
-                        <div class="cost">5 390 г</div>
+                        <div class="cost">5 390<span class="rubl">a</span></div>
                         <div class="col-avelibility">
                           <div class="status">В наличии</div>
                         </div>
@@ -457,9 +456,7 @@
                     <li class="inner__product_item inner__product_about">
                       <div class="about_title">Senseit L301 black</div>
                       <ul class="description__list description-1">
-                        <li class="description__item">
-                          <p>Смартфон Senseit L301 black, черный. Micro-SIM,две поддерживаемых SIM-карты, Android, 3G, GPS-модуль...</p>
-                        </li>
+                        <li class="description__item">Смартфон Senseit L301 black, черный. Micro-SIM,две поддерживаемых SIM-карты, Android, 3G, GPS-модуль...</li>
                       </ul>
                       <ul class="description__list description-2 clearfix">
                         <li class="description__item grey"><strong>Тип SIM-карты</strong><span>Micro-SIM</span></li>
@@ -483,7 +480,7 @@
                     </li>
                     <li class="inner__product_item inner__product_price">
                       <div class="price clearfix">
-                        <div class="cost">4 990 г</div>
+                        <div class="cost">4 990<span class="rubl">a</span></div>
                         <div class="col-avelibility">
                           <div class="status">В наличии</div>
                         </div>
@@ -506,9 +503,7 @@
                     <li class="inner__product_item inner__product_about">
                       <div class="about_title">HIGHSCREEN WinWin Black</div>
                       <ul class="description__list description-1">
-                        <li class="description__item">
-                          <p>Смартфон HIGHSCREEN WinWin Black оснащен 4&quot; дисплеем и двумя слотами для SIM-карт.  Windows Phone , 3G, Bluetooth, USB-подключение к ПК...</p>
-                        </li>
+                        <li class="description__item">Смартфон HIGHSCREEN WinWin Black оснащен 4&quot; дисплеем и двумя слотами для SIM-карт.  Windows Phone , 3G, Bluetooth, USB-подключение к ПК...</li>
                       </ul>
                       <ul class="description__list description-2 clearfix">
                         <li class="description__item grey"><strong>Тип SIM-карты</strong><span>Micro-SIM</span></li>
@@ -532,7 +527,7 @@
                     </li>
                     <li class="inner__product_item inner__product_price">
                       <div class="price clearfix">
-                        <div class="cost">3 990 г</div>
+                        <div class="cost">3 990<span class="rubl">a</span></div>
                         <div class="col-avelibility">
                           <div class="status">В наличии</div>
                         </div>
@@ -555,9 +550,7 @@
                     <li class="inner__product_item inner__product_about">
                       <div class="about_title">Alcatel OT4013D PIXI 3 (2 SIM)</div>
                       <ul class="description__list description-1">
-                        <li class="description__item">
-                          <p>Смартфон Смартфон Alcatel OT4013D PIXI 3 (2 SIM). Смартфон Alcatel One Touch 4013D оснащен четырехдюймовым дисплеем и двумя слотами для SIM-карт...</p>
-                        </li>
+                        <li class="description__item">Смартфон Смартфон Alcatel OT4013D PIXI 3 (2 SIM). Смартфон Alcatel One Touch 4013D оснащен четырехдюймовым дисплеем и двумя слотами для SIM-карт...</li>
                       </ul>
                       <ul class="description__list description-2 clearfix">
                         <li class="description__item grey"><strong>Тип SIM-карты</strong><span>Micro-SIM</span></li>
@@ -581,7 +574,7 @@
                     </li>
                     <li class="inner__product_item inner__product_price">
                       <div class="price clearfix">
-                        <div class="cost">3 290 г</div>
+                        <div class="cost">3 290<span class="rubl">a</span></div>
                         <div class="col-avelibility">
                           <div class="status">В наличии</div>
                         </div>
@@ -604,9 +597,7 @@
                     <li class="inner__product_item inner__product_about">
                       <div class="about_title">Fly IQ434 Era Nano 5</div>
                       <ul class="description__list description-1">
-                        <li class="description__item">
-                          <p>Смартфон Fly IQ434 Era Nano 5 оснащен 3.5&quot; дисплеем и двумя слотами для SIM-карт. Android 2.3, Micro SD, Wi-Fi.... </p>
-                        </li>
+                        <li class="description__item">Смартфон Fly IQ434 Era Nano 5 оснащен 3.5&quot; дисплеем и двумя слотами для SIM-карт. Android 2.3, Micro SD, Wi-Fi.... </li>
                       </ul>
                       <ul class="description__list description-2 clearfix">
                         <li class="description__item grey"><strong>Тип SIM-карты</strong><span>Micro-SIM</span></li>
@@ -630,7 +621,7 @@
                     </li>
                     <li class="inner__product_item inner__product_price">
                       <div class="price clearfix">
-                        <div class="cost">1 790 г</div>
+                        <div class="cost">1 790<span class="rubl">a</span></div>
                         <div class="col-avelibility">
                           <div class="status">В наличии</div>
                         </div>
@@ -716,6 +707,7 @@
     <script src="./js/checkbox_clean.js"></script>
     <script src="./js/rating.js"></script>
     <script src="./js/jquery.columnizer.js"></script>
+    <script src="./js/imgChanger.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>

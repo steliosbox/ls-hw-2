@@ -157,11 +157,15 @@ img {
     .price {
         
         .cost {
-            font: 20px/20px $bold;
+            font: 20px/20px $semibold;
             color: $colorDark;
             text-align: center;
             margin-top: 10px;
             margin-bottom: 10px;
+            .rubl {
+                font-family: $rubl;
+                margin-left: 5px;
+            }
         }
         button {
             font: 14px/20px $bold;
